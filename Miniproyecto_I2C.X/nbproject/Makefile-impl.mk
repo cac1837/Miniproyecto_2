@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=I2C_pic.X
+PROJECTNAME=Miniproyecto_I2C.X
 
 # Active Configuration
 DEFAULTCONF=default

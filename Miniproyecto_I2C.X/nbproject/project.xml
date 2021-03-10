@@ -3,12 +3,12 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>I2C_pic</name>
-            <creation-uuid>b6d96a9f-9f71-413b-a43e-5a9ef45c924c</creation-uuid>
+            <name>Miniproyecto_I2C</name>
+            <creation-uuid>1bcb1f5a-1d96-4cd2-a05f-5799c7b82b7b</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
