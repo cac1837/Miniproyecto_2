@@ -22,9 +22,9 @@ int raw_temp = 0;
 int incomingByte = 0;
 String led_state;     //Se crean variables para recibir el Tx del PIC, y del estado de la led del servidor
 
-AdafruitIO_Feed *temp = io.feed("Temp");
-AdafruitIO_Feed *Led_Verde = io.feed("Led_Verde");
-AdafruitIO_Feed *Led_Roja = io.feed("Led_Roja");  //Se crean las instancias para los feeds
+AdafruitIO_Feed *Temp = io.feed("Temp");
+AdafruitIO_Feed *Led_verde = io.feed("Led_verde");
+AdafruitIO_Feed *Led_roja = io.feed("Led_roja");  //Se crean las instancias para los feeds
 
 
 void handleMessage(AdafruitIO_Data *data) { //Funcion que se encarga de recibir los datos que se envian
@@ -44,8 +44,8 @@ void setup()
   // connect to io.adafruit.com
   io.connect();       //Se inicia la conexion a IOT de adafruit
 
-  Led_Verde->onMessage(handleMessage);
-  Led_Roja->onMessage(handleMessage); //Se llama a la funcion cuando se reciben datos de los feeds
+  Led_verde->onMessage(handleMessage);
+  Led_roja->onMessage(handleMessage); //Se llama a la funcion cuando se reciben datos de los feeds
   
   // wait for a connection
   while(io.status() < AIO_CONNECTED) { //While para que no avanze si no conecta a la nube
@@ -54,8 +54,8 @@ void setup()
   }
   digitalWrite(2,LOW);                //Apaga una vez conectado
 
-  Led_Verde->get();
-  Led_Roja->get();                  //Obtenemos datos de la Feed siempre que existan cambios
+  Led_verde->get();
+  Led_roja->get();                  //Obtenemos datos de la Feed siempre que existan cambios
 }
 
 void loop() {
@@ -73,7 +73,7 @@ void loop() {
     //Serial.println(incomingByte, HEX);
     //Serial.print("Enviando -> ");
     //Serial.println((incomingByte, HEX));
-    temp->save((incomingByte, DEC)); //La envia a la nube, al feed
+    Temp->save((incomingByte, DEC)); //La envia a la nube, al feed
   }
 
 

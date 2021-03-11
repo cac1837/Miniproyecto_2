@@ -103,8 +103,7 @@ void I2C_Slave_Init(short address)
   SSPIE = 1;        //Synchronous serial port interrupt enable
 }
 
-// INTERRUPCIÓN DE LECTURA
-// TENGO QUE MODIFICAR ESTE
+
 /*
 interrupción vacía I2C_Slave_Read (void)
 {

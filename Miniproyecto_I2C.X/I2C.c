@@ -35,7 +35,6 @@
 #include  "I2C.h"
 
 char sensor_dir = 0xEC ; // ID del sensor
-
 char TEMP_LSB = 0 ;
 char led = 0 ;       // Variables para almacenar datos de UART y del I2C
 

@@ -2590,7 +2590,6 @@ void I2C_Slave_Init(short address)
 
 
 char sensor_dir = 0xEC ;
-
 char TEMP_LSB = 0 ;
 char led = 0 ;
 

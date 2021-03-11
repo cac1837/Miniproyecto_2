@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Tue Mar 09 16:19:17 2021
+                                                                                               Wed Mar 10 23:30:31 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -413,7 +413,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    399 ;;
    400 ;; *************** function _main *****************
    401 ;; Defined at:
-   402 ;;		line 100 in file "I2C.c"
+   402 ;;		line 99 in file "I2C.c"
    403 ;; Parameters:    Size  Location     Type
    404 ;;		None
    405 ;; Auto vars:     Size  Location     Type
@@ -452,22 +452,22 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    438                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
    439                           
    440                           
-   441                           ;I2C.c: 101:     setup();
+   441                           ;I2C.c: 100:     setup();
    442  001B  120A  118A  20EB  120A  118A  	fcall	_setup
    443  0020                     l1081:
    444                           
-   445                           ;I2C.c: 103:         TXREG = TEMP_LSB;
+   445                           ;I2C.c: 102:         TXREG = TEMP_LSB;
    446  0020  1283               	bcf	3,5	;RP0=0, select bank0
    447  0021  1303               	bcf	3,6	;RP1=0, select bank0
    448  0022  0833               	movf	_TEMP_LSB,w
    449  0023  0099               	movwf	25	;volatile
    450  0024                     l1083:
    451                           
-   452                           ;I2C.c: 104:         I2C_Master_Start();
+   452                           ;I2C.c: 103:         I2C_Master_Start();
    453  0024  120A  118A  21E1  120A  118A  	fcall	_I2C_Master_Start
    454  0029                     l1085:
    455                           
-   456                           ;I2C.c: 105:         I2C_Master_Write(0b11101100);
+   456                           ;I2C.c: 104:         I2C_Master_Write(0b11101100);
    457  0029  30EC               	movlw	236
    458  002A  00F3               	movwf	I2C_Master_Write@d
    459  002B  3000               	movlw	0
@@ -475,7 +475,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    461  002D  120A  118A  21CE  120A  118A  	fcall	_I2C_Master_Write
    462  0032                     l1087:
    463                           
-   464                           ;I2C.c: 106:         I2C_Master_Write(0xD0);
+   464                           ;I2C.c: 105:         I2C_Master_Write(0xD0);
    465  0032  30D0               	movlw	208
    466  0033  00F3               	movwf	I2C_Master_Write@d
    467  0034  3000               	movlw	0
@@ -483,11 +483,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    469  0036  120A  118A  21CE  120A  118A  	fcall	_I2C_Master_Write
    470  003B                     l1089:
    471                           
-   472                           ;I2C.c: 107:         I2C_Master_Stop();
+   472                           ;I2C.c: 106:         I2C_Master_Stop();
    473  003B  120A  118A  21D8  120A  118A  	fcall	_I2C_Master_Stop
    474  0040                     l1091:
    475                           
-   476                           ;I2C.c: 108:         _delay((unsigned long)((200)*(4000000/4000.0)));
+   476                           ;I2C.c: 107:         _delay((unsigned long)((200)*(4000000/4000.0)));
    477  0040  3002               	movlw	2
    478  0041  1283               	bcf	3,5	;RP0=0, select bank0
    479  0042  1303               	bcf	3,6	;RP1=0, select bank0
@@ -505,17 +505,17 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    491  004D  2848               	goto	u387
    492  004E  284F               	nop2
    493                           
-   494                           ;I2C.c: 109:         I2C_Master_Start();
+   494                           ;I2C.c: 108:         I2C_Master_Start();
    495  004F  120A  118A  21E1  120A  118A  	fcall	_I2C_Master_Start
    496                           
-   497                           ;I2C.c: 110:         I2C_Master_Write(0b11101101);
+   497                           ;I2C.c: 109:         I2C_Master_Write(0b11101101);
    498  0054  30ED               	movlw	237
    499  0055  00F3               	movwf	I2C_Master_Write@d
    500  0056  3000               	movlw	0
    501  0057  00F4               	movwf	I2C_Master_Write@d+1
    502  0058  120A  118A  21CE  120A  118A  	fcall	_I2C_Master_Write
    503                           
-   504                           ;I2C.c: 111:         TEMP_LSB = I2C_Master_Read(0);
+   504                           ;I2C.c: 110:         TEMP_LSB = I2C_Master_Read(0);
    505  005D  3000               	movlw	0
    506  005E  00F3               	movwf	I2C_Master_Read@a
    507  005F  00F4               	movwf	I2C_Master_Read@a+1
@@ -527,11 +527,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    513  0069  0830               	movf	??_main,w
    514  006A  00B3               	movwf	_TEMP_LSB
    515                           
-   516                           ;I2C.c: 112:         I2C_Master_Stop();
+   516                           ;I2C.c: 111:         I2C_Master_Stop();
    517  006B  120A  118A  21D8  120A  118A  	fcall	_I2C_Master_Stop
    518  0070                     l1093:
    519                           
-   520                           ;I2C.c: 113:         _delay((unsigned long)((200)*(4000000/4000.0)));
+   520                           ;I2C.c: 112:         _delay((unsigned long)((200)*(4000000/4000.0)));
    521  0070  3002               	movlw	2
    522  0071  1283               	bcf	3,5	;RP0=0, select bank0
    523  0072  1303               	bcf	3,6	;RP1=0, select bank0
@@ -556,7 +556,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    542  00EB                     __ptext1:	
    543 ;; *************** function _setup *****************
    544 ;; Defined at:
-   545 ;;		line 44 in file "I2C.c"
+   545 ;;		line 43 in file "I2C.c"
    546 ;; Parameters:    Size  Location     Type
    547 ;;		None
    548 ;; Auto vars:     Size  Location     Type
@@ -592,46 +592,46 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    578                           ; Regs used in _setup: [wreg+status,2+status,0+pclath+cstack]
    579                           
    580                           
-   581                           ;I2C.c: 45:     ANSEL = 0;
+   581                           ;I2C.c: 44:     ANSEL = 0;
    582  00EB  1683               	bsf	3,5	;RP0=1, select bank3
    583  00EC  1703               	bsf	3,6	;RP1=1, select bank3
    584  00ED  0188               	clrf	8	;volatile
    585                           
-   586                           ;I2C.c: 46:     ANSELH = 0;
+   586                           ;I2C.c: 45:     ANSELH = 0;
    587  00EE  0189               	clrf	9	;volatile
    588                           
-   589                           ;I2C.c: 48:     TRISA = 0x00;
+   589                           ;I2C.c: 47:     TRISA = 0x00;
    590  00EF  1683               	bsf	3,5	;RP0=1, select bank1
    591  00F0  1303               	bcf	3,6	;RP1=0, select bank1
    592  00F1  0185               	clrf	5	;volatile
    593                           
-   594                           ;I2C.c: 49:     TRISB = 0x00;
+   594                           ;I2C.c: 48:     TRISB = 0x00;
    595  00F2  0186               	clrf	6	;volatile
    596                           
-   597                           ;I2C.c: 50:     TRISC = 0x00;
+   597                           ;I2C.c: 49:     TRISC = 0x00;
    598  00F3  0187               	clrf	7	;volatile
    599  00F4                     l1045:
    600                           
-   601                           ;I2C.c: 51:     TRISCbits.TRISC3 = 0;
+   601                           ;I2C.c: 50:     TRISCbits.TRISC3 = 0;
    602  00F4  1187               	bcf	7,3	;volatile
    603  00F5                     l1047:
    604                           
-   605                           ;I2C.c: 52:     TRISCbits.TRISC7 = 1;
+   605                           ;I2C.c: 51:     TRISCbits.TRISC7 = 1;
    606  00F5  1787               	bsf	7,7	;volatile
    607                           
-   608                           ;I2C.c: 53:     TRISD = 0x00;
+   608                           ;I2C.c: 52:     TRISD = 0x00;
    609  00F6  0188               	clrf	8	;volatile
    610                           
-   611                           ;I2C.c: 54:     TRISE = 0x00;
+   611                           ;I2C.c: 53:     TRISE = 0x00;
    612  00F7  0189               	clrf	9	;volatile
    613                           
-   614                           ;I2C.c: 55:     PORTE = 0x00;
+   614                           ;I2C.c: 54:     PORTE = 0x00;
    615  00F8  1283               	bcf	3,5	;RP0=0, select bank0
    616  00F9  1303               	bcf	3,6	;RP1=0, select bank0
    617  00FA  0189               	clrf	9	;volatile
    618  00FB                     l1049:
    619                           
-   620                           ;I2C.c: 57:     I2C_Master_Init(9);
+   620                           ;I2C.c: 56:     I2C_Master_Init(9);
    621  00FB  3000               	movlw	0
    622  00FC  00AB               	movwf	I2C_Master_Init@c+3
    623  00FD  3000               	movlw	0
@@ -643,72 +643,72 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    629  0103  120A  118A  2127  120A  118A  	fcall	_I2C_Master_Init
    630  0108                     l1051:
    631                           
-   632                           ;I2C.c: 59:     TXSTAbits.BRGH = 1;
+   632                           ;I2C.c: 58:     TXSTAbits.BRGH = 1;
    633  0108  1683               	bsf	3,5	;RP0=1, select bank1
    634  0109  1303               	bcf	3,6	;RP1=0, select bank1
    635  010A  1518               	bsf	24,2	;volatile
    636  010B                     l1053:
    637                           
-   638                           ;I2C.c: 60:     BAUDCTLbits.BRG16 = 0;
+   638                           ;I2C.c: 59:     BAUDCTLbits.BRG16 = 0;
    639  010B  1683               	bsf	3,5	;RP0=1, select bank3
    640  010C  1703               	bsf	3,6	;RP1=1, select bank3
    641  010D  1187               	bcf	7,3	;volatile
    642  010E                     l1055:
    643                           
-   644                           ;I2C.c: 61:     SPBRG = 25;
+   644                           ;I2C.c: 60:     SPBRG = 25;
    645  010E  3019               	movlw	25
    646  010F  1683               	bsf	3,5	;RP0=1, select bank1
    647  0110  1303               	bcf	3,6	;RP1=0, select bank1
    648  0111  0099               	movwf	25	;volatile
    649  0112                     l1057:
    650                           
-   651                           ;I2C.c: 64:     TXSTAbits.TXEN = 1;
+   651                           ;I2C.c: 63:     TXSTAbits.TXEN = 1;
    652  0112  1698               	bsf	24,5	;volatile
    653  0113                     l1059:
    654                           
-   655                           ;I2C.c: 65:     TXSTAbits.SYNC = 0;
+   655                           ;I2C.c: 64:     TXSTAbits.SYNC = 0;
    656  0113  1218               	bcf	24,4	;volatile
    657  0114                     l1061:
    658                           
-   659                           ;I2C.c: 66:     RCSTAbits.SPEN = 1;
+   659                           ;I2C.c: 65:     RCSTAbits.SPEN = 1;
    660  0114  1283               	bcf	3,5	;RP0=0, select bank0
    661  0115  1303               	bcf	3,6	;RP1=0, select bank0
    662  0116  1798               	bsf	24,7	;volatile
    663  0117                     l1063:
    664                           
-   665                           ;I2C.c: 67:     TXSTAbits.TX9 = 0;
+   665                           ;I2C.c: 66:     TXSTAbits.TX9 = 0;
    666  0117  1683               	bsf	3,5	;RP0=1, select bank1
    667  0118  1303               	bcf	3,6	;RP1=0, select bank1
    668  0119  1318               	bcf	24,6	;volatile
    669  011A                     l1065:
    670                           
-   671                           ;I2C.c: 70:     RCSTAbits.CREN = 1;
+   671                           ;I2C.c: 69:     RCSTAbits.CREN = 1;
    672  011A  1283               	bcf	3,5	;RP0=0, select bank0
    673  011B  1303               	bcf	3,6	;RP1=0, select bank0
    674  011C  1618               	bsf	24,4	;volatile
    675  011D                     l1067:
    676                           
-   677                           ;I2C.c: 71:     RCSTAbits.RX9 = 0;
+   677                           ;I2C.c: 70:     RCSTAbits.RX9 = 0;
    678  011D  1318               	bcf	24,6	;volatile
    679  011E                     l1069:
    680                           
-   681                           ;I2C.c: 74:     PIE1bits.RCIE = 1;
+   681                           ;I2C.c: 73:     PIE1bits.RCIE = 1;
    682  011E  1683               	bsf	3,5	;RP0=1, select bank1
    683  011F  1303               	bcf	3,6	;RP1=0, select bank1
    684  0120  168C               	bsf	12,5	;volatile
    685  0121                     l1071:
    686                           
-   687                           ;I2C.c: 75:     PIE1bits.TXIE = 0;
+   687                           ;I2C.c: 74:     PIE1bits.TXIE = 0;
    688  0121  120C               	bcf	12,4	;volatile
    689  0122                     l1073:
    690                           
-   691                           ;I2C.c: 76:     PIR1bits.RCIF = 0;
+   691                           ;I2C.c: 75:     PIR1bits.RCIF = 0;
    692  0122  1283               	bcf	3,5	;RP0=0, select bank0
    693  0123  1303               	bcf	3,6	;RP1=0, select bank0
    694  0124  128C               	bcf	12,5	;volatile
    695  0125                     l1075:
    696                           
-   697                           ;I2C.c: 78:     INTCONbits.GIE = 1;
+   697                           ;I2C.c: 77:     INTCONbits.GIE = 1;
    698  0125  178B               	bsf	11,7	;volatile
    699  0126                     l108:
    700  0126  0008               	return
@@ -1330,7 +1330,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1313  0161                     __ptext9:	
   1314 ;; *************** function _ISR *****************
   1315 ;; Defined at:
-  1316 ;;		line 83 in file "I2C.c"
+  1316 ;;		line 82 in file "I2C.c"
   1317 ;; Parameters:    Size  Location     Type
   1318 ;;		None
   1319 ;; Auto vars:     Size  Location     Type
@@ -1362,7 +1362,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1345  0161                     _ISR:
   1346  0161                     i1l843:
   1347                           
-  1348                           ;I2C.c: 84:     if (PIR1bits.RCIF == 1) {
+  1348                           ;I2C.c: 83:     if (PIR1bits.RCIF == 1) {
   1349  0161  1283               	bcf	3,5	;RP0=0, select bank0
   1350  0162  1303               	bcf	3,6	;RP1=0, select bank0
   1351  0163  1E8C               	btfss	12,5	;volatile
@@ -1373,18 +1373,18 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1356  0167                     u13_20:
   1357  0167                     i1l845:
   1358                           
-  1359                           ;I2C.c: 85:         PIR1bits.RCIF = 0;
+  1359                           ;I2C.c: 84:         PIR1bits.RCIF = 0;
   1360  0167  128C               	bcf	12,5	;volatile
   1361  0168                     i1l847:
   1362                           
-  1363                           ;I2C.c: 86:         led = RCREG;
+  1363                           ;I2C.c: 85:         led = RCREG;
   1364  0168  081A               	movf	26,w	;volatile
   1365  0169  00F0               	movwf	??_ISR
   1366  016A  0870               	movf	??_ISR,w
   1367  016B  00F9               	movwf	_led
   1368  016C                     i1l849:
   1369                           
-  1370                           ;I2C.c: 88:     if (led == 0X0A) {
+  1370                           ;I2C.c: 87:     if (led == 0X0A) {
   1371  016C  300A               	movlw	10
   1372  016D  0679               	xorwf	_led,w
   1373  016E  1D03               	btfss	3,2
@@ -1395,10 +1395,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1378  0172                     u14_20:
   1379  0172                     i1l851:
   1380                           
-  1381                           ;I2C.c: 89:         PORTE = 0;
+  1381                           ;I2C.c: 88:         PORTE = 0;
   1382  0172  0189               	clrf	9	;volatile
   1383                           
-  1384                           ;I2C.c: 90:     } else if (led == 0X0B) {
+  1384                           ;I2C.c: 89:     } else if (led == 0X0B) {
   1385  0173  298D               	goto	i1l121
   1386  0174                     i1l853:
   1387  0174  300B               	movlw	11
@@ -1411,11 +1411,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1394  017A                     u15_20:
   1395  017A                     i1l855:
   1396                           
-  1397                           ;I2C.c: 91:         PORTE = 1;
+  1397                           ;I2C.c: 90:         PORTE = 1;
   1398  017A  3001               	movlw	1
   1399  017B  0089               	movwf	9	;volatile
   1400                           
-  1401                           ;I2C.c: 92:     } else if (led == 0X0C) {
+  1401                           ;I2C.c: 91:     } else if (led == 0X0C) {
   1402  017C  298D               	goto	i1l121
   1403  017D                     i1l857:
   1404  017D  300C               	movlw	12
@@ -1438,7 +1438,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1421  018A                     u17_20:
   1422  018A                     i1l863:
   1423                           
-  1424                           ;I2C.c: 95:         PORTE = 2;
+  1424                           ;I2C.c: 94:         PORTE = 2;
   1425  018A  3002               	movlw	2
   1426  018B  0089               	movwf	9	;volatile
   1427  018C  298D               	goto	i1l121
@@ -1664,7 +1664,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Tue Mar 09 16:19:17 2021
+Symbol Table                                                                                   Wed Mar 10 23:30:31 2021
 
                        l81 01CD                         l90 01E0                         l75 0160  
                        l84 01E9                         l93 01D7                         l78 01C1  
